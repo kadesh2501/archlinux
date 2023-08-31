@@ -15,15 +15,37 @@ paru -Syu
 sudo pacman -Syu
 
 #base hyprland
-paru -S --needed hyprland-git hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils grim slurp mpv vvave librewolf-bin wlogout network-manager-applet udiskie pipewire-media-session
+paru -S --needed hyprland-git hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
+polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils \
+grim slurp librewolf-bin wlogout network-manager-applet udiskie pipewire-media-session thunar
 
 #theme
-paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors  tela-icon-theme 
+paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme 
 cp -r ~/hyprland/.config/ ~/.config/
-#wallpaper to be at ~/.config/hypr/hyprpaper.conf
+mkdir ~/Pictures/wallpaper
+cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
 
+#setup flatpaks
+#sudo pacman -Sy flatpak
+#steam
+#flatpak install flathub com.valvesoftware.Steam
+#flatseal
+#flatpak install flathub com.github.tchx84.Flatseal
+#I um and ah'd over this but flatpak is probs better
+#flatpak install flathub org.videolan.VLC
+#install xivlauncher
+#paru -S xivlauncher-git
 
-
-#copy modified configs
-#cp keybinds.conf ~/.config/hypr/keybinds.conf
-#cp startup.conf ~/.config/hypr/startup.conf
+#some other apps
+#flatpak install flathub com.discordapp.Discord
+#flatpak install flathub com.visualstudio.code
+#flatpak install flathub net.davidotek.pupgui2
+#flatpak install flathub com.heroicgameslauncher.hgl
+#flatpak install flathub org.gimp.GIMP
+#flatpak install flathub org.gnome.baobab
+#flatpak install flathub org.audacityteam.Audacity
+#flatpak install flathub org.blender.Blender
+#flatpak install flathub fr.handbrake.ghb
+#flatpak install flathub io.gitlab.librewolf-community
+#emulators
+#flatpak install flathub org.yuzu_emu.yuzu
