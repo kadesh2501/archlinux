@@ -4,7 +4,10 @@ Scripts for Arch HyprLand Install
 - install arch from archinstall as bare minimum install - no DE
 - needs GRUB2 as bootloader for timeshift as well
 - install the following packages in archinstall 
-git base-devel tldr man nano mc rsync amd-ucode timeshift openssh
+- git base-devel tldr man nano mc rsync amd-ucode timeshift openssh
 
 Reboot.
-After Reboot Clone this Repo and run whichever script for you require
+
+After Reboot Clone this Repo and run whichever script for the GPU you require.
+
+setup.sh will do the rest
