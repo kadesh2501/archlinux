@@ -5,3 +5,6 @@ Scripts for Arch HyprLand Install
 - needs GRUB2 as bootloader for timeshift as well
 - install the following packages in archinstall 
 git base-devel tldr man nano mc rsync amd-ucode timeshift openssh
+
+Reboot.
+After Reboot Clone this Repo and run whichever script for you require
