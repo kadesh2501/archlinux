@@ -52,7 +52,7 @@ yay -Sy insync
 
 #This will do pretty much everything, but change browser and term in ~/.config/hypr/keybinds.conf to suit (kitty for term, librewolf for browser)
 #copy modified configs
-cp keybinds.conf /home/tristan/.config/hypr/keybinds.conf
+cp keybinds.conf ~/.config/hypr/keybinds.conf
 cp sshd_config.conf /etc/ssh/sshd_config.conf
 
 #setup flatpaks
