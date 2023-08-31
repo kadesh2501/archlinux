@@ -1,11 +1,4 @@
-#should be run as standard user
-#install arch from archinstall as bare minimum install - no DE
-#needs GRUB2 as bootloader for timeshift as well
-#do the below in archinstall
-#install some base things
-#sudo pacman -Sy git base-devel tldr man nano mc rsync amd-ucode
-#btfrs snapshotting
-#sudo pacman -Sy timeshift
+#!/bin/sh
 #install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
