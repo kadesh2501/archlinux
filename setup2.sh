@@ -15,9 +15,10 @@ paru -S --noconfirm --needed hyprland-bin hyprpaper waybar-hyprland-git xdg-desk
 
 #theme
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors  tela-icon-theme 
-cd Downloads &
+mkdir ~/Downloads
+cd ~/Downloads
 git clone https://github.com/vs66388/hyprland.git
-cp .config/ ~/.config/
+cp -r ~/Downloads/hyprland/.config/ ~/.config/
 #wallpaper to be at ~/.config/hypr/hyprpaper.conf
 
 #ssh
