@@ -1,5 +1,6 @@
 #!/bin/sh
-
+#install base stuffs
+sudo pacman -Sy tldr man nano mc rsync amd-ucode timeshift openssh
 #install paru
 git clone https://aur.archlinux.org/paru-bin
 cd paru-bin
