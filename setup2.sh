@@ -15,16 +15,20 @@ paru -Syu
 sudo pacman -Syu
 
 #base hyprland
-paru -S --needed hyprland-git hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
+paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils \
-grim slurp librewolf-bin wlogout network-manager-applet udiskie pipewire-media-session thunar
+grim slurp librewolf-bin wlogout network-manager-applet udiskie wireplumber thunar
 
 #theme
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme 
 cp -r ~/hyprland/.config/ ~/.config/
+mkdir ~/Pictures
 mkdir ~/Pictures/wallpaper
 cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
 
+#install sddm
+sudo pacman -S --noconfirm --needed sddm
+sudo systemctl enable sddm
 #setup flatpaks
 #sudo pacman -Sy flatpak
 #steam
@@ -46,6 +50,5 @@ cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
 #flatpak install flathub org.audacityteam.Audacity
 #flatpak install flathub org.blender.Blender
 #flatpak install flathub fr.handbrake.ghb
-#flatpak install flathub io.gitlab.librewolf-community
 #emulators
 #flatpak install flathub org.yuzu_emu.yuzu
