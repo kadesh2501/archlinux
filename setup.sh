@@ -34,8 +34,11 @@ pipewire-jack wireplumber gst-plugin-pipewire pavucontrol
 
 git clone https://github.com/linuxmobile/hyprland-dots $HOME/Downloads/hyprland-dots/
 cd $HOME/Downloads/hyprland-dots/
+git submodule update --init
 rsync -avxHAXP --exclude '.git*' .* ~/
-
+#setup sddm
+#enable it
+sudo systemctl enable sddm.service
 #make sddm not look like garbo
 #this theme is nice enough - https://github.com/MarianArlt/kde-plasma-chili
 git clone https://github.com/MarianArlt/kde-plasma-chili.git
@@ -50,7 +53,7 @@ yay -Sy plasma-desktop plasma-wayland-session
 #install insync
 yay -Sy insync
 
-#This will do pretty much everything, but change browser and term in ~/.config/hypr/keybinds.conf to suit (kitty for term, librewolf for browser)
+#This will do pretty much everything, but change browser and term in ~/.config/hypr/keybinds.conf to suit
 #copy modified configs
 cp keybinds.conf ~/.config/hypr/keybinds.conf
 cp startup.conf ~/.config/hypr/startup.conf
