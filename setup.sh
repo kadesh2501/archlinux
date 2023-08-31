@@ -2,7 +2,7 @@
 #install arch from archinstall as bare minimum install - no DE
 #needs GRUB2 as bootloader for timeshift as well
 #install some base things
-sudo pacman -Sy git base-devel tldr man nano mc rsync
+sudo pacman -Sy git base-devel tldr man nano mc rsync amd-ucode
 
 #btfrs snapshotting
 sudo pacman -Sy timeshift
