@@ -21,7 +21,7 @@ grim slurp librewolf-bin wlogout network-manager-applet udiskie wireplumber thun
 
 #theme
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme 
-cp -r ~/hyprland/.config/ ~/.config/
+cp -r ~/hyprland/.config/ ~/
 mkdir ~/Pictures
 mkdir ~/Pictures/wallpaper
 cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
