@@ -1,7 +1,11 @@
 #should be run as standard user
+#install arch from archinstall as bare minimum install - no DE
+#needs GRUB2 as bootloader for timeshift as well
 #install some base things
-sudo pacman -Sy git base-devel tldr man nano mc rsync kitty
+sudo pacman -Sy git base-devel tldr man nano mc rsync
 
+#btfrs snapshotting
+sudo pacman -Sy timeshift
 #install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -19,7 +23,7 @@ xwaylandvideobridge-cursor-mode-2-git cliphist qt5-imageformats qt5ct
 
 ## CLI & Tools
 yay -Sy btop cava neofetch noise-suppression-for-voice   \
-rofi-lbonn-wayland-git rofi-emoji starship zsh viewnior ocs-url
+rofi-lbonn-wayland-git rofi-emoji starship zsh viewnior ocs-url wezterm bat
 
 ## Browser & File Explorer
 yay -Sy file-roller noto-fonts noto-fonts-cjk  \
@@ -46,7 +50,7 @@ sudo mv kde-plasma-chili /usr/share/sddm/themes
 #manually modify /usr/lib/sddm/sddm.conf.d/default.conf to suit
 #Current=kde-plasma-chili
 #we need some kde components for this and it's nice to have kde as a backup anyways
-sudo pacman -Sy plasma-desktop plasma-wayland-session
+yay -Sy plasma-desktop plasma-wayland-session
 
 ##END THEMING
 
@@ -59,7 +63,7 @@ cp keybinds.conf /home/tristan/.config/hypr/keybinds.conf
 cp sshd_config.conf /etc/ssh/sshd_config.conf
 
 #setup flatpaks
-sudo pacman -Sy flatpak firefox
+sudo pacman -Sy flatpak
 #steam
 flatpak install flathub com.valvesoftware.Steam
 #flatseal
