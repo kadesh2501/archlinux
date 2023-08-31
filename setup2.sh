@@ -2,7 +2,7 @@
 #install base stuffs
 sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh
 #ssh
-cp sshd_config.conf /etc/ssh/sshd_config.conf
+sudo cp sshd_config.conf /etc/ssh/sshd_config.conf
 sudo systemctl enable sshd
 sudo systemctl start sshd
 #install paru
@@ -15,14 +15,11 @@ paru -Syu
 sudo pacman -Syu
 
 #base hyprland
-paru -S --needed hyprland-git hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils grim slurp mpv vvave librewolf-bin wlogout network-manager-applet  udiskie
+paru -S --needed hyprland-git hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils grim slurp mpv vvave librewolf-bin wlogout network-manager-applet udiskie pipewire-media-session
 
 #theme
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors  tela-icon-theme 
-mkdir ~/Downloads
-cd ~/Downloads
-git clone https://github.com/vs66388/hyprland.git
-cp -r ~/Downloads/hyprland/.config/ ~/.config/
+cp -r ~/hyprland/.config/ ~/.config/
 #wallpaper to be at ~/.config/hypr/hyprpaper.conf
 
 
