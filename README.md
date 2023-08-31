@@ -1,4 +1,6 @@
 # hyprland
+(you have no idea how WIP this is)
+
 Scripts for Arch HyprLand Install
 - should be run as standard user
 - install arch from archinstall as bare minimum install - no DE
