@@ -11,7 +11,7 @@ paru -Syu
 sudo pacman -Syu
 
 #base hyprland
-paru -S --noconfirm --needed hyprland-bin hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils grim slurp mpv vvave librewolf-bin wlogout nm-applet 
+paru -S --noconfirm --needed hyprland-bin hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils grim slurp mpv vvave librewolf-bin wlogout nm-applet udiskie
 
 #theme
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors  tela-icon-theme 
