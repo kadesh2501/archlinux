@@ -13,3 +13,10 @@ Reboot.
 After Reboot Clone this Repo and run whichever script for the GPU you require.
 
 setup.sh will do the rest
+
+# TODO
+| Thing                             | Fixed |
+| ----------------------------------|:-----:|
+|wlogout logout leaves screen blank | No    |
+|No Audio                           | No    |
+
