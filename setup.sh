@@ -1,6 +1,6 @@
 #!/bin/sh
 #install base stuffs
-sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch
+sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat
 
 #ssh
 sudo cp sshd_config.conf /etc/ssh/sshd_config.conf
@@ -25,7 +25,7 @@ polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit br
 grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst
 
 #theme
-paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome
+paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome ttf-jetbrains-mono-nerd
 cp -r ~/hyprland/.config/ ~/
 mkdir ~/Pictures
 mkdir ~/Pictures/wallpaper

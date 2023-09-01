@@ -9,7 +9,7 @@
     "spacing": 5, 
     "modules-left": ["custom/launcher", "wlr/workspaces",],
     "modules-center": [],
-    "modules-right": ["tray", "backlight", "wireplumber", "network", "battery", "clock", "custom/power-menu"],
+    "modules-right": ["tray", "cpu", "memory", "wireplumber", "network", "battery", "clock", "custom/power-menu"],
     "wlr/workspaces": {
       //"format": "{icon}",
       "on-click": "activate",
