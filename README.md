@@ -22,6 +22,6 @@ setup.sh will do the rest
 |No Audio widget on waybar          | Yes   |
 |Fix Brightness Icon on waybar      | No    |
 |Fix Wifi Available List on waybar  | No    |
-
+|make wezterm bindings nano friendly| Yes   |
 
 
