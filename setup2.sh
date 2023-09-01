@@ -21,8 +21,8 @@ sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewir
 #enable it
 systemctl enable --user pipewire-pulse.service
 paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
-polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils \
-grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar
+polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl alsa-utils \
+grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst
 
 #theme
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome
