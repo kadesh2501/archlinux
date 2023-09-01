@@ -34,6 +34,9 @@ cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
 #install sddm
 sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
+
+#install webcord (a discord client)
+paru -S webcord
 #setup flatpaks
 #sudo pacman -Sy flatpak
 #steam
@@ -42,7 +45,7 @@ sudo systemctl enable sddm
 #flatpak install flathub com.github.tchx84.Flatseal
 #I um and ah'd over this but flatpak is probs better
 #flatpak install flathub org.videolan.VLC
-#install xivlauncher
+#install xivlauncher from AUR
 #paru -S xivlauncher-git
 
 #some other apps

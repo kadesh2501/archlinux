@@ -1,4 +1,4 @@
-# hyprland
+# Personlised hyprland Arch minimal install
 (you have no idea how WIP this is)
 
 Scripts for Arch HyprLand Install
@@ -23,5 +23,9 @@ setup.sh will do the rest
 |Fix Brightness Icon on waybar      | No    |
 |Fix Wifi Available List on waybar  | No    |
 |make wezterm bindings nano friendly| Yes   |
+|Test flatpaks                      |       |
+|Test Steam                         |       |
+|Test webcord for Discord           |       |
+|add smb file browsing              |       |
 
 
