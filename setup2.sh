@@ -1,6 +1,6 @@
 #!/bin/sh
 #install base stuffs
-sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop
+sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch
 
 #ssh
 sudo cp sshd_config.conf /etc/ssh/sshd_config.conf
