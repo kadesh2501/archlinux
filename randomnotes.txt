@@ -1,5 +1,0 @@
- sed -n pkglist.txt | while read line
-  do
-    echo "INSTALLING: ${line}"
-    yay -S --noconfirm --needed  ${line}
-  done
