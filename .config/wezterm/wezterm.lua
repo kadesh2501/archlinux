@@ -41,7 +41,7 @@ return {
 	enable_wayland = true,
 
 	-- Keybinds
-	disable_default_key_bindings = true,
+	disable_default_key_bindings = false,
 	keys = {
 		{
 			key = [[\]],
@@ -59,7 +59,7 @@ return {
 		},
 		{
 			key = "q",
-			mods = "CTRL",
+			mods = "CTRL|SHIFT",
 			action = wezterm.action({ CloseCurrentPane = { confirm = false } }),
 		},
 		{
@@ -104,12 +104,12 @@ return {
 		},
 		{ -- browser-like bindings for tabbing
 			key = "t",
-			mods = "CTRL",
+			mods = "CTRL|SHIFT",
 			action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }),
 		},
 		{
 			key = "w",
-			mods = "CTRL",
+			mods = "CTRL|SHIFT",
 			action = wezterm.action({ CloseCurrentTab = { confirm = false } }),
 		},
 		{
@@ -122,11 +122,11 @@ return {
 			mods = "CTRL|SHIFT",
 			action = wezterm.action({ ActivateTabRelative = -1 }),
 		}, -- standard copy/paste bindings
-		{
-			key = "x",
-			mods = "CTRL",
-			action = "ActivateCopyMode",
-		},
+		--{
+		--	key = "x",
+		--	mods = "CTRL",
+		--	action = "ActivateCopyMode",
+		--},
 		{
 			key = "v",
 			mods = "CTRL|SHIFT",
