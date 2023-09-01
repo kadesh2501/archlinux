@@ -17,7 +17,7 @@ sudo pacman -Syu
 
 #base hyprland
 #pipewire for audio
-sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
+sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber pavucontrol
 #enable it
 systemctl enable --user pipewire-pulse.service
 paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
@@ -25,7 +25,7 @@ polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit br
 grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar
 
 #theme
-paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme 
+paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome
 cp -r ~/hyprland/.config/ ~/
 mkdir ~/Pictures
 mkdir ~/Pictures/wallpaper

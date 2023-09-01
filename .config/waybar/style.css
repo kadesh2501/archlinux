@@ -153,6 +153,9 @@ window#waybar.hidden {
 #pulseaudio {
   color: #7d9bba;
 }
+#wireplumber {
+  color: #7d9bba;
+}
 
 #backlight {
    color: #8fbcbb;
