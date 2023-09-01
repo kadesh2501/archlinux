@@ -17,6 +17,8 @@ setup.sh will do the rest
 # TODO
 | Thing                             | Fixed |
 | ----------------------------------|:-----:|
-|wlogout logout leaves screen blank | Yes    |
-|No Audio                           | No    |
+|wlogout logout leaves screen blank | Yes   |
+|No Audio                           | Yes   |
+|No Audio widget on waybar          | No    |
+
 

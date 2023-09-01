@@ -1,6 +1,7 @@
 #!/bin/sh
 #install base stuffs
-sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh
+sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop
+
 #ssh
 sudo cp sshd_config.conf /etc/ssh/sshd_config.conf
 sudo systemctl enable sshd
@@ -15,9 +16,13 @@ paru -Syu
 sudo pacman -Syu
 
 #base hyprland
+#pipewire for audio
+sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
+#enable it
+systemctl enable --user pipewire-pulse.service
 paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl pavucontrol alsa-utils \
-grim slurp librewolf-bin wlogout network-manager-applet udiskie wireplumber thunar
+grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar
 
 #theme
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme 
