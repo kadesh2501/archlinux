@@ -19,6 +19,6 @@ setup.sh will do the rest
 | ----------------------------------|:-----:|
 |wlogout logout leaves screen blank | Yes   |
 |No Audio                           | Yes   |
-|No Audio widget on waybar          | No    |
+|No Audio widget on waybar          | Yes    |
 
 
