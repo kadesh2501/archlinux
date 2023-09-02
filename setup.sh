@@ -21,6 +21,7 @@ sudo pacman -Syu
 sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber pavucontrol
 #enable it
 systemctl enable --user pipewire-pulse.service
+#install hyprland itself
 paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl alsa-utils \
 grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst
@@ -70,10 +71,14 @@ flatpak install --user flathub org.videolan.VLC
 #some other apps
 #flatpak install --user flathub com.discordapp.Discord
 flatpak install --user flathub com.visualstudio.code
-flatpak install --user flathub net.davidotek.pupgui2
+#protonup-qt
+flatpak install --user flathub net.davidotek.pupgui2 
+
 flatpak install --user flathub com.heroicgameslauncher.hgl
 flatpak install --user flathub org.gimp.GIMP
+#Disk Usage Analyser
 flatpak install --user flathub org.gnome.baobab
+
 flatpak install --user flathub org.audacityteam.Audacity
 flatpak install --user flathub org.blender.Blender
 flatpak install --user flathub fr.handbrake.ghb
