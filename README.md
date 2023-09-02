@@ -15,17 +15,17 @@ After Reboot Clone this Repo and run whichever script for the GPU you require.
 setup.sh will do the rest
 
 # TODO
-| Thing                             | Fixed |
-| ----------------------------------|:-----:|
-|wlogout logout leaves screen blank | Yes   |
-|No Audio                           | Yes   |
-|No Audio widget on waybar          | Yes   |
-|Fix Brightness Icon on waybar      | No    |
-|Fix Wifi Available List on waybar  | Kinda |
-|make wezterm bindings nano friendly| Yes   |
-|Test flatpaks                      |       |
-|Test Steam                         |       |
-|Test webcord for Discord           |       |
-|add smb file browsing              |       |
+| Thing                             | Fixed   |
+| ----------------------------------|:-------:|
+|wlogout logout leaves screen blank | Yes     |
+|No Audio                           | Yes     |
+|No Audio widget on waybar          | Yes     |
+|Fix Brightness Icon on waybar      | Removed |
+|Fix Wifi Available List on waybar  | Kinda   |
+|make wezterm bindings nano friendly| Yes     |
+|Test flatpaks                      | Doing   |
+|Steam flatpak has issues connecting| No      |
+|Test webcord for Discord           |         |
+|add smb file browsing              |         |
 
 

@@ -54,10 +54,11 @@ EOF
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #steam
 flatpak install --user flathub com.valvesoftware.Steam
+paru -S --noconfirm --needed  game-devices-udev #for controllers to work
 #flatseal
 flatpak install --user flathub com.github.tchx84.Flatseal
 #I um and ah'd over this but flatpak is probs better
-fflatpak install --user flathub org.videolan.VLC
+flatpak install --user flathub org.videolan.VLC
 #install xivlauncher from AUR
 #paru -S xivlauncher-git
 
