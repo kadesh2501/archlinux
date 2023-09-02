@@ -29,6 +29,11 @@ systemctl enable --user pipewire-pulse.service
 paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt gedit brightnessctl alsa-utils \
 grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst
+#add an authentication daemon for elevation in GUI
+pacman -S --noconfirm --needed polkit-kde-agent
+#fix timeshift shortcut
+#mkdir ~/.local/share/applications
+#cp ~/hyprland/timeshift-gtk.desktop ~/.local/share/applications
 
 #theme
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome ttf-jetbrains-mono-nerd
@@ -61,6 +66,10 @@ repo_version=1
 mode=bare-user-only
 min-free-space-size=500MB
 EOF
+
+#make a timeshift snapshot at this point so we can get back to a base system
+sudo timeshift --create --comments "Base Install" --tags D
+
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #steam
 flatpak install --user flathub com.valvesoftware.Steam
@@ -89,3 +98,6 @@ flatpak install --user flathub org.blender.Blender
 flatpak install --user flathub fr.handbrake.ghb
 #emulators
 #flatpak install flathub org.yuzu_emu.yuzu
+
+#make a timeshift snapshot at this point so we can get back to a base system where apps are installed
+sudo timeshift --create --comments "Main Applications Installed" --tags D
