@@ -61,6 +61,7 @@ flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/fl
 #steam
 flatpak install --user flathub com.valvesoftware.Steam
 paru -S --noconfirm --needed  game-devices-udev #for controllers to work
+flatpak run --filesystem=~/.local/share/fonts --filesystem=~/.config/fontconfig com.valvesoftware.Steam #for asian fonts/characters
 #flatseal
 flatpak install --user flathub com.github.tchx84.Flatseal
 #I um and ah'd over this but flatpak is probs better
