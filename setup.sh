@@ -1,12 +1,8 @@
 #!/bin/sh
 #this should be run as standard user
-#install base stuffs
-sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat
 
-#ssh
-sudo cp sshd_config.conf /etc/ssh/sshd_config.conf
-sudo systemctl enable sshd
-sudo systemctl start sshd
+#install git and base-devel incase they weren't installed by archinstall
+sudo pacman -S --noconfirm --needed git base-devel
 #install paru
 git clone https://aur.archlinux.org/paru-bin
 cd paru-bin
@@ -16,6 +12,14 @@ makepkg -si
 paru -Syu
 sudo pacman -Syu
 
+#install base stuffs
+sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat
+
+#ssh
+sudo cp sshd_config.conf /etc/ssh/sshd_config.conf
+sudo systemctl enable sshd
+sudo systemctl start sshd
+
 #base hyprland
 #pipewire for audio
 sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber pavucontrol
@@ -23,7 +27,7 @@ sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewir
 systemctl enable --user pipewire-pulse.service
 #install hyprland itself
 paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
-polkit-kde-agent rofi-lbonn-wayland-git wezterm kitty pcmanfm-qt neovim gedit brightnessctl alsa-utils \
+polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt gedit brightnessctl alsa-utils \
 grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst
 
 #theme
