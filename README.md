@@ -1,6 +1,4 @@
 # Personlised hyprland Arch minimal install
-(you have no idea how WIP this is)
-
 Scripts for Arch HyprLand Install
 - should be run as standard user
 - install arch from archinstall as bare minimum install - no DE
@@ -25,8 +23,7 @@ setup.sh will do the rest
 |Fix Wifi Icon on waybar            | No      |
 |make wezterm bindings nano friendly| Yes     |
 |Test flatpaks                      | Doing   |
-|Steam flatpak has issues connecting| HW issue|
-|Test webcord for Discord           |         |
-|add smb file browsing              |         |
+|Test webcord for Discord           | Yes     |
+|add smb file browsing              | Yes     |
 
 

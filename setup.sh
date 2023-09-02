@@ -1,4 +1,5 @@
 #!/bin/sh
+#this should be run as standard user
 #install base stuffs
 sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat
 
@@ -35,6 +36,8 @@ cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
 sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
 
+#setup smbclient
+sudo pacman -S --noconfirm --needed smbclient gvfs-smb
 #install webcord (a discord client)
 paru -S webcord
 #install gamescope
