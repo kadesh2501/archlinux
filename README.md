@@ -22,9 +22,10 @@ setup.sh will do the rest
 |No Audio widget on waybar          | Yes     |
 |Fix Brightness Icon on waybar      | Removed |
 |Fix Wifi Available List on waybar  | Kinda   |
+|Fix Wifi Icon on waybar            | No      |
 |make wezterm bindings nano friendly| Yes     |
 |Test flatpaks                      | Doing   |
-|Steam flatpak has issues connecting| No      |
+|Steam flatpak has issues connecting| HW issue|
 |Test webcord for Discord           |         |
 |add smb file browsing              |         |
 
