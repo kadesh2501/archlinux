@@ -1,4 +1,4 @@
-# Personlised hyprland Arch minimal install
+# Personalised hyprland Arch minimal install
 Scripts for Arch HyprLand Install
 - should be run as standard user
 - install arch from archinstall as bare minimum install - no DE
