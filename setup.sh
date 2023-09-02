@@ -37,26 +37,39 @@ sudo systemctl enable sddm
 
 #install webcord (a discord client)
 paru -S webcord
+#install gamescope
+sudo pacman -S --noconfirm --needed gamescope
 #setup flatpaks
-#sudo pacman -Sy flatpak
+sudo pacman -Sy flatpak
+#fix flatpak  - https://github.com/flatpak/flatpak/issues/5488
+sudo mkdir /var/lib/flatpak
+cd /var/lib/flatpak
+sudo mkdir -p repo/objects repo/tmp
+sudo tee repo/config <<EOF
+[core]
+repo_version=1
+mode=bare-user-only
+min-free-space-size=500MB
+EOF
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #steam
-#flatpak install flathub com.valvesoftware.Steam
+flatpak install --user flathub com.valvesoftware.Steam
 #flatseal
-#flatpak install flathub com.github.tchx84.Flatseal
+flatpak install --user flathub com.github.tchx84.Flatseal
 #I um and ah'd over this but flatpak is probs better
-#flatpak install flathub org.videolan.VLC
+fflatpak install --user flathub org.videolan.VLC
 #install xivlauncher from AUR
 #paru -S xivlauncher-git
 
 #some other apps
-#flatpak install flathub com.discordapp.Discord
-#flatpak install flathub com.visualstudio.code
-#flatpak install flathub net.davidotek.pupgui2
-#flatpak install flathub com.heroicgameslauncher.hgl
-#flatpak install flathub org.gimp.GIMP
-#flatpak install flathub org.gnome.baobab
-#flatpak install flathub org.audacityteam.Audacity
-#flatpak install flathub org.blender.Blender
-#flatpak install flathub fr.handbrake.ghb
+#flatpak install --user flathub com.discordapp.Discord
+flatpak install --user flathub com.visualstudio.code
+flatpak install --user flathub net.davidotek.pupgui2
+flatpak install --user flathub com.heroicgameslauncher.hgl
+flatpak install --user flathub org.gimp.GIMP
+flatpak install --user flathub org.gnome.baobab
+flatpak install --user flathub org.audacityteam.Audacity
+flatpak install --user flathub org.blender.Blender
+flatpak install --user flathub fr.handbrake.ghb
 #emulators
 #flatpak install flathub org.yuzu_emu.yuzu
