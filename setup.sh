@@ -36,6 +36,7 @@ pacman -S --noconfirm --needed polkit-kde-agent
 #cp ~/hyprland/timeshift-gtk.desktop ~/.local/share/applications
 
 #theme
+sudo pacman -S --needed ttf-font-awesome ttc-iosevka noto-fonts-cjk
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome ttf-jetbrains-mono-nerd
 cp -r ~/hyprland/.config/ ~/
 mkdir ~/Pictures
