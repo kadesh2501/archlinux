@@ -19,8 +19,8 @@ setup.sh will do the rest
 |No Audio                               | Yes     |
 |No Audio widget on waybar              | Yes     |
 |Fix Brightness Icon on waybar          | Removed |
-|Fix Wifi Available List on waybar      | No      |
-|Fix Wifi Icon on waybar                | No      |
+|Fix Wifi Available List on waybar      | Removed |
+|Fix Wifi Icon on waybar                | Yes     |
 |make wezterm bindings nano friendly    | Yes     |
 |Test flatpaks                          | Doing   |
 |Test webcord for Discord               | Yes     |
