@@ -1,0 +1,20 @@
+# Default env vars.
+export XDG_CURRENT_DESKTOP="Hyprland"
+export XDG_SESSION_TYPE="wayland"
+export XDG_SESSION_DESKTOP="Hyprland"
+export GDK_BACKEND="wayland,x11"
+export QT_QPA_PLATFORM="wayland;xcb"
+export SDL_VIDEODRIVER="wayland"
+export MOZ_DISABLE_RDD_SANDBOX=1
+export MOZ_ENABLE_WAYLAND=1
+
+export QT_QPA_PLATFORMTHEME="qt5ct" #export QT_STYLE_OVERRIDE=kvantum
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+export CLUTTER_BACKEND="wayland"
+export _JAVA_AWT_WM_NONREPARENTING=1
+export WLR_NO_HARDWARE_CURSORS=1 
+
+export OZONE_PLATFORM="wayland"

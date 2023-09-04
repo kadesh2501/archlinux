@@ -72,17 +72,16 @@ EOF
 sudo timeshift --create --comments "Base Install" --tags D
 
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-#steam
-flatpak install --user flathub com.valvesoftware.Steam
+#steam - needs to be native for xivlauncher
+sudo -S --noconfirm --needed pacman steam ttf-liberation
 paru -S --noconfirm --needed  game-devices-udev #for controllers to work
-flatpak run --filesystem=~/.local/share/fonts --filesystem=~/.config/fontconfig com.valvesoftware.Steam #for asian fonts/characters
+
+#xivlauncher 
+flatpak install flathub dev.goats.xivlauncher
 #flatseal
 flatpak install --user flathub com.github.tchx84.Flatseal
-#I um and ah'd over this but flatpak is probs better
+#VLC Player
 flatpak install --user flathub org.videolan.VLC
-#install xivlauncher from AUR
-#paru -S xivlauncher-git
-
 #some other apps
 #flatpak install --user flathub com.discordapp.Discord
 flatpak install --user flathub com.visualstudio.code
@@ -97,6 +96,8 @@ flatpak install --user flathub org.gnome.baobab
 flatpak install --user flathub org.audacityteam.Audacity
 flatpak install --user flathub org.blender.Blender
 flatpak install --user flathub fr.handbrake.ghb
+
+flatpak install --user flathub dev.goats.xivlauncher
 #emulators
 #flatpak install flathub org.yuzu_emu.yuzu
 
