@@ -13,7 +13,7 @@ paru -Syu
 sudo pacman -Syu
 
 #install base stuffs
-sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat
+sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat dnsutils
 
 #ssh
 sudo cp sshd_config.conf /etc/ssh/sshd_config.conf
@@ -46,6 +46,9 @@ cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
 #install sddm
 sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
+
+#copy .bashrc for Environment variables
+cp ~/hyprland/.bashrc ~/.bashrc
 
 #setup smbclient
 sudo pacman -S --noconfirm --needed smbclient gvfs-smb
