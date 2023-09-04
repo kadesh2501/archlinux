@@ -25,7 +25,7 @@ setup.sh will do the rest
 |Test flatpaks                          | Doing   |
 |Test webcord for Discord               | Yes     |
 |add smb file browsing                  | Yes     |
-|flatpak protonup-qt won't start        | No      |
+|flatpak protonup-qt won't start        | Yes     |
 |SDDM Theming                           |         |
 |Text rendering in some flatpaks is bad |         |
 
