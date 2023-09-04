@@ -27,7 +27,7 @@ sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewir
 systemctl enable --user pipewire-pulse.service
 #install hyprland itself
 paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
-polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt gedit brightnessctl alsa-utils \
+polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt brightnessctl alsa-utils \
 grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst
 #add an authentication daemon for elevation in GUI
 pacman -S --noconfirm --needed polkit-kde-agent

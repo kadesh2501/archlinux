@@ -137,7 +137,10 @@
 		"on-click-right": "pavucontrol"
   },
   "wireplumber": {
-    "format": "{volume}%",
+    "format": "{icon} {volume}%",
+    "format-icons": {
+			"default": ["󰕿", "󰖀", "󰕾"]
+		},
     "format-muted": "",
     "on-click": "pavucontrol"
   },
