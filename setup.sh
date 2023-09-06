@@ -26,11 +26,11 @@ sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewir
 #enable it
 systemctl enable --user pipewire-pulse.service
 #install hyprland itself
-paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
+paru -S --noconfirm --neededhyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt brightnessctl alsa-utils \
 grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst
 #add an authentication daemon for elevation in GUI
-sudo pacman -S --noconfirm --needed polkit-kde-agent
+#sudo pacman -S --noconfirm --needed polkit-kde-agent
 #fix timeshift shortcut
 #mkdir ~/.local/share/applications
 #cp ~/hyprland/timeshift-gtk.desktop ~/.local/share/applications
@@ -53,7 +53,7 @@ cp ~/hyprland/.bashrc ~/.bashrc
 #setup smbclient
 sudo pacman -S --noconfirm --needed smbclient gvfs-smb
 #install webcord (a discord client)
-paru -S webcord
+paru -S --noconfirm webcord
 #install gamescope
 sudo pacman -S --noconfirm --needed gamescope
 #set gamescope priority -- https://wiki.archlinux.org/title/Gamescope#Setting_Gamescopes_priority
