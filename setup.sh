@@ -16,7 +16,7 @@ sudo pacman -Syu
 sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat dnsutils
 
 #ssh
-sudo cp sshd_config.conf /etc/ssh/sshd_config.conf
+sudo cp sshd_config.conf /etc/ssh/sshd_config
 sudo systemctl enable sshd
 sudo systemctl start sshd
 
@@ -76,11 +76,11 @@ sudo timeshift --create --comments "Base Install" --tags D
 
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #steam - needs to be native for xivlauncher
-sudo -S --noconfirm --needed pacman steam ttf-liberation
+sudo pacman -S  steam ttf-liberation
 paru -S --noconfirm --needed  game-devices-udev #for controllers to work
 
 #xivlauncher 
-flatpak install flathub dev.goats.xivlauncher
+flatpak install --user flathub dev.goats.xivlauncher
 #flatseal
 flatpak install --user flathub com.github.tchx84.Flatseal
 #VLC Player
