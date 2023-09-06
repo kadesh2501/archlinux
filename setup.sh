@@ -26,7 +26,7 @@ sudo pacman -S --noconfirm --needed pipewire pipewire-alsa pipewire-jack pipewir
 #enable it
 systemctl enable --user pipewire-pulse.service
 #install hyprland itself
-paru -S --noconfirm --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
+paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt brightnessctl alsa-utils \
 grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst xord-xwayland
 #add an authentication daemon for elevation in GUI
@@ -46,6 +46,9 @@ cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
 #install sddm
 sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
+#sddm theming
+paru -S --needed --noconfirm sddm-nordic-theme-git
+sudo cp ~/hyprland/01-sddm.conf /etc/sddm.conf.d/
 
 #copy .bashrc for Environment variables
 cp ~/hyprland/.bashrc ~/.bashrc
