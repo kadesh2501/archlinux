@@ -22,11 +22,12 @@ setup.sh will do the rest
 |Fix Wifi Available List on waybar      | Removed |
 |Fix Wifi Icon on waybar                | Yes     |
 |make wezterm bindings nano friendly    | Yes     |
-|Test flatpaks                          | Doing   |
+|Test flatpaks                          | Done    |
 |Test webcord for Discord               | Yes     |
 |add smb file browsing                  | Yes     |
 |flatpak protonup-qt won't start        | Yes     |
-|SDDM Theming                           |         |
+|SDDM Theming                           | Yes     |
+|Add Premlim OBS Support                | Yes     |
 |Text rendering in some flatpaks is bad |         |
 
 
