@@ -6,7 +6,7 @@
     "margin-bottom": 0,
     "margin-left": 0,
     "margin-right": 0,
-    "modules-left": ["custom/launcher", "wlr/workspaces", "custom/playerctl", "custom/playerlabel"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window", "custom/playerctl", "custom/playerlabel"],
     "modules-center": ["cpu", "memory", "disk"],
     "modules-right": ["tray", "battery", "network", "wireplumber", "clock"],
     // Modules configuration
@@ -16,27 +16,23 @@
         	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         	"format-alt": " {:%d/%m}"
 	},
-	
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "max-length": 200,
+    "separate-outputs": true
+  },
 
-	"wlr/workspaces": {
-        "active-only": false,
-        "all-outputs": true,
-        "disable-scroll": false,
-        "on-scroll-up": "hyprctl dispatch workspace -1",
-        "on-scroll-down": "hyprctl dispatch workspace +1",
-		"format": "{icon}",
+	"hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "disable-scroll": false,
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1",
+		"format": "{name}",
 		"on-click": "activate",
-		"format-icons": {
-//			"1": "一",
-//			"2": "二",
-//			"3": "三",
-//			"4": "四",
-//			"5": "五",
-			"urgent": "",
-			"active": "",
-			"default": "󰧞",
-    "sort-by-number": true
-    },
+    "persistent_workspaces": {
+      "1": []
+      }
     },
 
     "custom/playerctl": {
@@ -50,7 +46,7 @@
       "format-icons": {
         "Playing": "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>",
         "Paused": "<span foreground='#928374'>󰒮 󰏥 󰒭</span>"
-      },
+      }
     },
 
     "custom/playerlabel": {
@@ -64,7 +60,7 @@
       "format-icons": {
         "Playing": "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>",
         "Paused": "<span foreground='#928374'>󰒮 󰏥 󰒭</span>"
-      },
+      }
     },
 
 	"battery": {
@@ -119,7 +115,7 @@
 	"backlight": {
         // "device": "acpi_video1",
 	"format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
 //	"on-scroll-up":,
 //	"on-scroll-down":,
 	},
@@ -151,7 +147,7 @@
   },
   "custom/launcher": {
     "format": "󰈸",
-    "on-click": "rofi -show drun",
+    "on-click": "rofi -show drun"
   },
 
 
@@ -170,6 +166,6 @@
     "format": "󰈋",
     "on-click": "hyprpicker -a -f hex",
     "on-click-right": "hyprpicker -a -f rgb"
-  },
   }
+
 }
