@@ -30,7 +30,7 @@
     "on-scroll-down": "hyprctl dispatch workspace +1",
 		"format": "{name}",
 		"on-click": "activate",
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": []
       }
     },
@@ -64,30 +64,32 @@
     },
 
 	"battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format":"{icon}  {capacity}%",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{icon} {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+    },
+    "format":"{icon}  {capacity}%",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{icon} {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""]
 	},
 
   "memory": {
     "format": "󰍛 {}%",
     "format-alt": "󰍛 {used}/{total} GiB",
-    "interval": 5
+    "interval": 5,
+    "on-click": "wezterm start --always-new-process btop"
   },
 
   "cpu": {
     "format": "󰻠 {usage}%",
     "format-alt": "󰻠 {avg_frequency} GHz",
-    "interval": 5
+    "interval": 5,
+    "on-click": "wezterm start --always-new-process btop"
   },
 
   "disk": {
@@ -98,7 +100,7 @@
   },
 	
 	"network": {
-    "interval": 2,
+    "interval": 5,
     "format": "{ifname}",
     "format-wifi":  " {bandwidthDownBytes}  {bandwidthUpBytes}",
     "format-ethernet": "{ipaddr}/{cidr} ",
@@ -120,7 +122,7 @@
 	"backlight": {
         // "device": "acpi_video1",
 	"format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+  "format-icons": ["", "", "", "", "", "", "", "", ""]
 //	"on-scroll-up":,
 //	"on-scroll-down":,
 	},
