@@ -66,7 +66,10 @@ paru -S --noconfirm webcord
 sudo pacman -S --noconfirm --needed gamescope
 #set gamescope priority -- https://wiki.archlinux.org/title/Gamescope#Setting_Gamescopes_priority
 sudo setcap 'CAP_SYS_NICE=eip' $(which gamescope)
-#setup flatpaks
+#setup bkVasalt mangohud etc 
+sudo pacman -S --noconfirm mesa-demos vulkan-tools lazarus qt5pas breeze
+paru -S goverlay-bin vkbasalt replay-sorcery-git mangohud
+#setup flatpaks 
 sudo pacman -Sy flatpak
 #fix flatpak  - https://github.com/flatpak/flatpak/issues/5488
 sudo mkdir /var/lib/flatpak
