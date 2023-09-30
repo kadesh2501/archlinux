@@ -28,6 +28,6 @@ setup.sh will do the rest
 |flatpak protonup-qt won't start        | Yes     |
 |SDDM Theming                           | Yes     |
 |Add Premlim OBS Support                | Yes     |
-|Text rendering in some flatpaks is bad |         |
+|Text rendering in some flatpaks is bad | Yes     |
 
 

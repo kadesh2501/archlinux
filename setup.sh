@@ -31,7 +31,9 @@ sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
 #sddm theming
 #KDE bits are required for this theme and having KDE as a backup is fine by me anyways
-sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin kdegraphics-thumbnailers konsole kwallet-pam ksshaskpass kwalletmanager
+sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin kdegraphics-thumbnailers konsole
+#kde wallet
+sudo pacman -S kwallet-pam ksshaskpass kwalletmanager
 paru -S --needed --noconfirm sddm-nordic-theme-git
 
 #install hyprland itself
