@@ -31,7 +31,7 @@ sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
 #sddm theming
 #KDE bits are required for this theme and having KDE as a backup is fine by me anyways
-sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session 
+sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin kdegraphics-thumbnailers konsole kwallet-pam ksshaskpass kwalletmanager
 paru -S --needed --noconfirm sddm-nordic-theme-git
 
 #install hyprland itself
@@ -48,6 +48,7 @@ grim slurp librewolf-bin wlogout network-manager-applet udiskie thunar dunst xor
 sudo pacman -S --needed ttf-font-awesome ttc-iosevka noto-fonts-cjk playerctl
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome ttf-jetbrains-mono-nerd
 cp -r ~/hyprland/.config/ ~/
+cp -r ~/hyprland/.local/ ~/
 mkdir ~/Pictures
 mkdir ~/Pictures/wallpaper
 cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
@@ -55,8 +56,8 @@ cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
 sudo mkdir /etc/sddm.conf.d
 sudo cp ~/hyprland/01-sddm.conf /etc/sddm.conf.d/
 
-#copy .bashrc for Environment variables
-cp ~/hyprland/.bashrc ~/.bashrc
+#copy .hyperlandenv for Environment variables
+cp ~/hyprland/.hyperlandenv ~/.hyperlandenv
 
 #setup smbclient
 sudo pacman -S --noconfirm --needed smbclient gvfs-smb
@@ -68,7 +69,9 @@ sudo pacman -S --noconfirm --needed gamescope
 sudo setcap 'CAP_SYS_NICE=eip' $(which gamescope)
 #setup bkVasalt mangohud etc 
 sudo pacman -S --noconfirm mesa-demos vulkan-tools lazarus qt5pas breeze
-paru -S goverlay-bin vkbasalt replay-sorcery-git mangohud
+paru -S goverlay-bin vkbasalt replay-sorcery-git mangohud lib32-mangohud
+#copy over reshade shaders
+sudo cp -R  ~/hyprland/opt/reshade /opt
 #setup flatpaks 
 sudo pacman -Sy flatpak
 #fix flatpak  - https://github.com/flatpak/flatpak/issues/5488
