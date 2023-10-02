@@ -64,7 +64,7 @@ cp ~/hyprland/.hyperlandenv ~/.hyperlandenv
 #setup smbclient
 sudo pacman -S --noconfirm --needed smbclient gvfs-smb
 #install webcord (a discord client)
-paru -S --noconfirm webcord
+#paru -S --noconfirm webcord
 #install gamescope
 sudo pacman -S --noconfirm --needed gamescope
 #set gamescope priority -- https://wiki.archlinux.org/title/Gamescope#Setting_Gamescopes_priority
@@ -109,6 +109,7 @@ flatpak install --user flathub net.davidotek.pupgui2
 
 flatpak install --user flathub com.heroicgameslauncher.hgl
 flatpak install --user flathub org.gimp.GIMP
+flatpak install --user flathub com.discordapp.Discord
 #Disk Usage Analyser
 flatpak install --user flathub org.gnome.baobab
 
