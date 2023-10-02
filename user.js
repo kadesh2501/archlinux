@@ -93,7 +93,7 @@ user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("browser.sessionstore.interval", 60000);
 
 /** SHUTDOWN & SANITIZING ***/
-,user_pref("privacy.history.custom", true);
+user_pref("privacy.history.custom", true);
 
 /** SEARCH / URL BAR ***/
 user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
@@ -254,6 +254,11 @@ user_pref("browser.tabs.firefox-view-next", true); // [FF119+]
 // PREF: control the amount of cross-origin information to send
 // 0=send full URI (default), 1=scheme+host+port+path, 2=scheme+host+port
 user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
+
+// Prefer Dark mode on websites if available
+user_pref("browser.theme.content-theme", 2);
+user_pref("ui.systemUsesDarkTheme", 1);
+
 
 /****************************************************************************
  * END: BETTERFOX                                                           *
