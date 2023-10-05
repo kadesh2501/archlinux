@@ -259,6 +259,15 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
 user_pref("browser.theme.content-theme", 2);
 user_pref("ui.systemUsesDarkTheme", 1);
 
+// PREF: restore login manager and autofill
+user_pref("signon.rememberSignons", true);
+
+// PREF: restore address and credit card manager
+user_pref("extensions.formautofill.addresses.enabled", true);
+user_pref("extensions.formautofill.creditCards.enabled", true);
+
+// PREF: disable capturing credentials in private browsing windows
+user_pref("signon.privateBrowsingCapture.enabled", false);
 
 /****************************************************************************
  * END: BETTERFOX                                                           *

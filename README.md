@@ -29,5 +29,4 @@ setup.sh will do the rest
 |SDDM Theming                           | Yes     |
 |Add Premlim OBS Support                | Yes     |
 |Text rendering in some flatpaks is bad | Yes     |
-
-
+|System hangs on suspend - probably Nvidia bug - https://wiki.archlinux.org/title/NVIDIA/Troubleshooting 1.11| No |
