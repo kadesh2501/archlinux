@@ -39,7 +39,7 @@ paru -S --needed --noconfirm sddm-nordic-theme-git
 #install hyprland itself
 paru -S hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt brightnessctl alsa-utils \
-grim slurp wlogout network-manager-applet udiskie thunar dunst xord-xwayland thunar-archive-plugin thunar-media-tags-plugin
+grim slurp wlogout network-manager-applet udiskie thunar dunst xord-xwayland thunar-archive-plugin thunar-media-tags-plugin swayidle
 #add an authentication daemon for elevation in GUI
 #sudo pacman -S --noconfirm --needed polkit-kde-agent
 #fix timeshift shortcut
