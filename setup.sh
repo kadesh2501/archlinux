@@ -13,7 +13,7 @@ paru -Syu
 sudo pacman -Syu
 
 #install base stuffs
-sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat dnsutils
+sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat dnsutils htop
 
 #ssh
 sudo cp sshd_config.conf /etc/ssh/sshd_config
@@ -31,15 +31,15 @@ sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
 #sddm theming
 #KDE bits are required for this theme and having KDE as a backup is fine by me anyways
-sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin kdegraphics-thumbnailers konsole firefox
+sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin kdegraphics-thumbnailers konsole firefox partitionmanager
 #kde wallet
 sudo pacman -S kwallet-pam ksshaskpass kwalletmanager
 paru -S --needed --noconfirm sddm-nordic-theme-git
 
 #install hyprland itself
-paru -S --needed hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
+paru -S hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt brightnessctl alsa-utils \
-grim slurp wlogout network-manager-applet udiskie thunar dunst xord-xwayland
+grim slurp wlogout network-manager-applet udiskie thunar dunst xord-xwayland thunar-archive-plugin thunar-media-tags-plugin
 #add an authentication daemon for elevation in GUI
 #sudo pacman -S --noconfirm --needed polkit-kde-agent
 #fix timeshift shortcut
@@ -86,7 +86,8 @@ repo_version=1
 mode=bare-user-only
 min-free-space-size=500MB
 EOF
-
+#install fuse2 for appimages
+sudo pacman -Sy fuse2
 #make a timeshift snapshot at this point so we can get back to a base system
 sudo timeshift --create --comments "Base Install" --tags D
 
@@ -117,7 +118,6 @@ flatpak install --user flathub org.audacityteam.Audacity
 flatpak install --user flathub org.blender.Blender
 flatpak install --user flathub fr.handbrake.ghb
 
-flatpak install --user flathub dev.goats.xivlauncher
 #emulators
 #flatpak install flathub org.yuzu_emu.yuzu
 
