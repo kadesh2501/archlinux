@@ -40,12 +40,10 @@ paru -S --needed --noconfirm sddm-nordic-theme-git
 paru -S hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt brightnessctl alsa-utils \
 grim slurp wlogout network-manager-applet udiskie thunar dunst xord-xwayland thunar-archive-plugin thunar-media-tags-plugin swayidle
-#add an authentication daemon for elevation in GUI
-#sudo pacman -S --noconfirm --needed polkit-kde-agent
-#fix timeshift shortcut
-#mkdir ~/.local/share/applications
-#cp ~/hyprland/timeshift-gtk.desktop ~/.local/share/applications
-
+#set some defaults
+xdg-settings set default-web-browser firefox.desktop #make firefox default web handler
+xdg-mime default thunar.desktop inode/directory #make thunar default file handler
+xdg-mime default firefox.desktop x-scheme-handler/https x-scheme-handler/http #make defualt firefox URL handler
 #theme
 sudo pacman -S --needed ttf-font-awesome ttc-iosevka noto-fonts-cjk playerctl
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome ttf-jetbrains-mono-nerd
@@ -117,9 +115,6 @@ flatpak install --user flathub org.gnome.baobab
 flatpak install --user flathub org.audacityteam.Audacity
 flatpak install --user flathub org.blender.Blender
 flatpak install --user flathub fr.handbrake.ghb
-
-#emulators
-#flatpak install flathub org.yuzu_emu.yuzu
 
 #make a timeshift snapshot at this point so we can get back to a base system where apps are installed
 sudo timeshift --create --comments "Main Applications Installed" --tags D
