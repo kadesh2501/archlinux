@@ -31,7 +31,7 @@ sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
 #sddm theming
 #KDE bits are required for this theme and having KDE as a backup is fine by me anyways
-sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin kdegraphics-thumbnailers konsole firefox partitionmanager
+sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin kdegraphics-thumbnailers konsole firefox partitionmanager kscreen
 #kde wallet
 sudo pacman -S kwallet-pam ksshaskpass kwalletmanager
 paru -S --needed --noconfirm sddm-nordic-theme-git
@@ -60,6 +60,11 @@ sudo cp ~/hyprland/01-sddm.conf /etc/sddm.conf.d/
 
 #copy .hyperlandenv for Environment variables
 cp ~/hyprland/.hyperlandenv ~/.hyperlandenv
+#setup drivers for focusrite scarlett
+paru alsa-scarlett-gui
+sudo tee /etc/modprobe.d/scarlett.conf <<EOF
+options snd_usb_audio vid=0x1235 pid=0x8212 device_setup=1
+EOF
 
 #setup smbclient
 sudo pacman -S --noconfirm --needed smbclient gvfs-smb
@@ -117,6 +122,9 @@ flatpak install --user flathub org.gnome.baobab
 flatpak install --user flathub org.audacityteam.Audacity
 flatpak install --user flathub org.blender.Blender
 flatpak install --user flathub fr.handbrake.ghb
+
+#regen initram for scarlet module
+sudo mkinitcpio -P
 
 #make a timeshift snapshot at this point so we can get back to a base system where apps are installed
 sudo timeshift --create --comments "Main Applications Installed" --tags D
