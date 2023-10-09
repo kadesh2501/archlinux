@@ -1,8 +1,6 @@
 #!/bin/sh
 #flatseal
 flatpak install --user flathub com.github.tchx84.Flatseal
-#VLC Player
-flatpak install --user flathub org.videolan.VLC
 #some other apps
 #flatpak install --user flathub com.discordapp.Discord
 flatpak install --user flathub com.visualstudio.code
