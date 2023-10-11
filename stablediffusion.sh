@@ -5,4 +5,4 @@ cd ~
 paru python3.10
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui && cd stable-diffusion-webui
 python3.10 -m venv venv
-./webui.sh --precision full --no-half --skip-torch-cuda-check
+./webui.sh --precision full --no-half --skip-torch-cuda-test
