@@ -45,7 +45,7 @@ paru -S --needed --noconfirm sddm-nordic-theme-git
 #install hyprland itself
 paru -S hyprland hyprpaper waybar-hyprland-git xdg-desktop-portal-wlr wlroots xdg-desktop-portal \
 polkit-kde-agent rofi-lbonn-wayland-git wezterm pcmanfm-qt brightnessctl alsa-utils \
-grim slurp wlogout-git network-manager-applet udiskie thunar dunst xord-xwayland thunar-archive-plugin thunar-media-tags-plugin swayidle swaylock sway-audio-idle-inhibit-git
+grim slurp wlogout-git network-manager-applet udiskie thunar dunst xorg-xwayland thunar-archive-plugin thunar-media-tags-plugin swayidle swaylock sway-audio-idle-inhibit-git
 #set some defaults
 xdg-settings set default-web-browser firefox.desktop #make firefox default web handler
 xdg-mime default thunar.desktop inode/directory #make thunar default file handler
