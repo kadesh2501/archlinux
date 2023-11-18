@@ -3,6 +3,12 @@
 cp ~
 #install git and base-devel incase they weren't installed by archinstall
 sudo pacman -S --noconfirm --needed git base-devel
+
+#pull down dotfiles
+git clone https://github.com/kadesh2501/dotfiles
+#copy in dotfiles
+cp -r ~/dotfiles/.config/ ~/
+cp -r ~/dotfiles/.local/ ~/
 #install paru
 git clone https://aur.archlinux.org/paru-bin
 cd paru-bin
@@ -43,14 +49,13 @@ grim slurp wlogout-git network-manager-applet udiskie thunar dunst xord-xwayland
 #set some defaults
 xdg-settings set default-web-browser firefox.desktop #make firefox default web handler
 xdg-mime default thunar.desktop inode/directory #make thunar default file handler
-xdg-mime default firefox.desktop x-scheme-handler/https x-scheme-handler/http #make defualt firefox URL handler
+xdg-mime default firefox.desktop x-scheme-handler/https x-scheme-handler/http #make firefox default URL handler
 #make support scripts executable
 chmod +x ~/.config/hypr/scripts/swayidle.sh
 #theme
 sudo pacman -S --needed ttf-font-awesome ttc-iosevka noto-fonts-cjk playerctl
 paru -S --noconfirm --needed catppuccin-gtk-theme-mocha vimix-cursors tela-icon-theme otf-font-awesome ttf-jetbrains-mono-nerd
-cp -r ~/hyprland/.config/ ~/
-cp -r ~/hyprland/.local/ ~/
+
 mkdir ~/Pictures
 mkdir ~/Pictures/wallpaper
 cp ~/hyprland/wallpaper.jpg ~/Pictures/wallpaper/wallpaper.jpg
@@ -86,18 +91,16 @@ repo_version=1
 mode=bare-user-only
 min-free-space-size=500MB
 EOF
-#install fuse2 for appimages
-sudo pacman -Sy fuse2
-#make a timeshift snapshot at this point so we can get back to a base system
-sudo timeshift --create --comments "Base Install" --tags D
 
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 #steam - needs to be native for xivlauncher
 sudo pacman -S  steam ttf-liberation
 paru -S --noconfirm --needed  game-devices-udev #for controllers to work
 
+#install fuse2 for appimages
+sudo pacman -Sy fuse2
 #xivlauncher 
 flatpak install --user flathub dev.goats.xivlauncher
 
-#make a timeshift snapshot at this point so we can get back to a base system where apps are installed
-sudo timeshift --create --comments "Main Applications Installed" --tags D
+#make a timeshift snapshot at this point so we can get back to a base system
+sudo timeshift --create --comments "Base Install" --tags D
