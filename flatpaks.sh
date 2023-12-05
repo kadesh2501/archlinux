@@ -1,4 +1,6 @@
 #!/bin/sh
+#xivlauncher 
+flatpak install --user flathub dev.goats.xivlauncher
 #flatseal
 flatpak install --user flathub com.github.tchx84.Flatseal
 #some other apps

@@ -1,3 +1,4 @@
+#!/bin/sh
 sudo usermod -aG render $USER
 sudo usermod -aG video $USER
 #will default to putting everything in /home
