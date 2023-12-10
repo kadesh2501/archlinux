@@ -1,5 +1,5 @@
 #!/bin/sh
-#TODO add nvidia-drm.modeset=1 kernel parameter to grub2
+# TODO add nvidia-drm.modeset=1 kernel parameter to grub2
 #on RTX 3070M gamescope is probably not an option thanks NVIDIA
 #you may have issues when switching workspaces for fullscreen games
 #install NVIDIA GPU drivers
