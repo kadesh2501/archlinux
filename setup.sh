@@ -40,7 +40,7 @@ sudo pacman -S --noconfirm --needed sddm
 sudo systemctl enable sddm
 #sddm theming
 #KDE bits are required for this theme and having KDE as a backup is fine by me anyways
-sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin dolphin-plugins kdegraphics-thumbnailers konsole firefox partitionmanager kscreen network-manager-applet plasma-pa
+sudo pacman -S plasma-desktop phonon-qt5-vlc plasma-wayland-session plasma-nm discover dolphin dolphin-plugins kdegraphics-thumbnailers konsole firefox partitionmanager kscreen network-manager-applet plasma-pa adobe-source-han-sans-jp-fonts noto-fonts-cjk
 #kde wallet
 sudo pacman -S kwallet-pam ksshaskpass kwalletmanager
 paru -S --needed --noconfirm sddm-nordic-theme-git
@@ -67,6 +67,7 @@ sudo pacman -S  steam ttf-liberation
 
 #install fuse2 for appimages
 sudo pacman -Sy fuse2
+sudo pacman -Sy winetricks
 
 #make a timeshift snapshot at this point so we can get back to a base system
 sudo timeshift --create --comments "Base Install" --tags D
