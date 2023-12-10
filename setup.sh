@@ -20,7 +20,7 @@ paru -Syu
 sudo pacman -Syu
 
 #install base stuffs
-sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat dnsutils htop
+sudo pacman -S --noconfirm --needed tldr man nano mc rsync amd-ucode timeshift openssh btop neofetch bat dnsutils htop vi
 
 #ssh
 sudo cp ~/archlinux/sshd_config.conf /etc/ssh/sshd_config
