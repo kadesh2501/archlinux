@@ -63,7 +63,7 @@ sudo cp -R  ~/archlinux/opt/reshade /opt
 
 #steam - needs to be native for xivlauncher
 sudo pacman -S  steam ttf-liberation
-paru -S --noconfirm --needed  game-devices-udev #for controllers to work
+#paru -S --noconfirm --needed  game-devices-udev #for controllers to work
 
 #install fuse2 for appimages
 sudo pacman -Sy fuse2
