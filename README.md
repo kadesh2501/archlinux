@@ -1,5 +1,5 @@
-# Personalised hyprland Arch minimal install
-Scripts for Arch HyprLand Install
+# Personalised Arch minimal install
+Scripts for Arch Install
 - should be run as standard user
 - install arch from archinstall as bare minimum install - no DE
 - needs GRUB2 as bootloader for timeshift as well
@@ -7,15 +7,22 @@ Scripts for Arch HyprLand Install
 
 Reboot.
 
-After Reboot Clone this Repo and run whichever script for the GPU you require.
+After Reboot Clone this Repo and run setup.sh (it will attempt to work out what GPU drivers to install)
 
-- setup.sh will do the base install with KDE (using SDDM for login), GameScope, vkBasalt, MangoHUD, fuse2 and Steam
-- hyprland.sh will install hyprland and required pre-reqs for my theme
-- flatpak.sh will install flatpak
-- flatpaks.sh will install my personal selection of flatpaks
-- obs.sh will install OBS
-- focusritescarlet.sh will enable the kernel module for Focusrite Scarlet 4i4
-- stablediffusion.sh will setup stablediffusion for AMD users (NVIDIA people please follow their guide instead)
+- setup.sh will do the base install and run the following scripts as well:
+- kde.sh (KDE (using SDDM for login))
+- steam.sh (obvious)
+- game-utils.sh (GameScope, vkBasalt, MangoHUD)
+- flatpak.sh (will install flatpak)
+- flatpaks.sh (will install my personal selection of flatpaks)
+- pipewire.sh (will install pipewire and pavucontrol)
+
+Extra Scripts:
+- hyprland.sh (will install hyprland and required pre-reqs for my theme)
+- obs.sh (will install OBS)
+- focusritescarlet.sh (will enable the kernel module for Focusrite Scarlet 4i4)
+- stablediffusion.sh (will setup stablediffusion for AMD users (NVIDIA people please follow their guide instead))
+- emualtors.sh (will install emuDeck)
 
 # TODO
 | Thing                                 | Fixed   |
@@ -28,7 +35,6 @@ After Reboot Clone this Repo and run whichever script for the GPU you require.
 |Fix Wifi Icon on waybar                | Yes     |
 |make wezterm bindings nano friendly    | Yes     |
 |Test flatpaks                          | Done    |
-|Test webcord for Discord               | Yes     |
 |add smb file browsing                  | Yes     |
 |flatpak protonup-qt won't start        | Yes     |
 |SDDM Theming                           | Yes     |
@@ -36,3 +42,5 @@ After Reboot Clone this Repo and run whichever script for the GPU you require.
 |Text rendering in some flatpaks is bad | Yes     |
 |System hangs on suspend - probably Nvidia bug - https://wiki.archlinux.org/title/NVIDIA/Troubleshooting 1.11 | Won't Fix |
 |Make XDG config defaults work between KDE/Hyprland | No |
+
+You use this at your own risk - no warranties implied or support given yada yada
